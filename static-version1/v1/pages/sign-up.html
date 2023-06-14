@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidmoni - Sign Up</title>
+    <link rel="stylesheet" href="../build/style.css">
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Compulsory Style -->
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sign-up__wrapper original-wrapper">
+
+        <div class="support__modal">
+            <section class="support">
+                <h2 class="support__header">Support us</h2>
+                <button class="support__close">
+                    <img src="../images/svg-images/close.svg" alt="Support Close Button">
+                </button>
+                <form action="" class="support__form">
+                    <input type="hidden" name="_subject" value="new sign in">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://liquidmoni.netlify.app/pages/authentication.html">
+                    <section class="support__form-action">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Detail inputs -->
+                        <input type="hidden" name="_subject" value="new sign in">
+                        <!-- Change deployment url. -->
+
+                        <!-- <input type="hidden" name="_next" value="https://jailbreak-101.github.io/LIQUIDMONI.COM/thank-you.html"> -->
+                        <input type="hidden" name="_next" value="support-message">
+
+                        <fieldset class="support__form-field">
+                            <label class="support__form-label" for="username">Name: </label>
+                            <div class="support__form-input-container">
+                                <input type="text" class="support__form-input" id="username" name="username"
+                                    placeholder="Name" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="support__form-field">
+                            <label class="support__form-label" for="email">Email: </label>
+                            <div class="support__form-input-container">
+                                <input type="email" class="support__form-input" id="email" name="user-email"
+                                    placeholder="Email" required>
+                            </div>
+                        </fieldset>
+
+                        <textarea class="support__form-input support__form-textarea" name="user-message" id="message"
+                            cols="41" rows="10" placeholder="Message" required></textarea>
+                        <button type="submit" class="support__button">Submit</button>
+                        <p class="support__link">You can also support us by emailing<a href=""
+                                class="link">Support@liquidmoni.com</a></p>
+                    </section>
+                </form>
+            </section>
+        </div>
+
+        <header class="header">
+            <nav class="nav">
+                <a href="../index.html" class="nav__image-link">
+                    <img class="nav__logo" src="../images/header/Liquid-moni.png" alt="the logo">
+                </a>
+
+
+                <section class="mini-nav">
+                    <!-- <fieldset class="nav__toggle-box"> -->
+                    <label for="toggle" class="toggle__icon"><img src="../images/svg-images/menu.png"
+                            alt="toggle"></label>
+                    <input type="checkbox" id="toggle" class="toggle">
+                    <!-- </fieldset> -->
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./sign-up.html" class="nav__link">Send Money</a></li>
+                        <li class="nav__item"><a href="./about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="./contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item"><a href="./faq.html" class="nav__link">FAQ</a></li>
+                        <button class="support__open">Support</button>
+
+                        <!-- <div class="nav__button-group"> -->
+                        <a href="./sign-up.html" class="nav__button">Download Soon</a>
+                        <!-- </div> -->
+                    </ul>
+                </section>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <!-- SIGN UP -->
+            <!-- https://formsubmit.co/liquidmoniainfo@gmail.com -->
+            <div class="sign__up">
+                <form class="sign__up-form" action="https://formsubmit.co/liquidmoniainfo@gmail.com" method="post">
+                    <input type="hidden" name="_subject" value="new user">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- use next page as a modal to confirm user has signed up or signed in -->
+                    <input type="hidden" name="_next" value="https://liquidmoni.com/index.html">
+                    <p class="sign__up-note">You've signed up successfully</p>
+
+                    <section class="sign__up-form-action">
+                        <fieldset class="sign__up-field">
+                            <label class="sign__up-label" for="email">Email Address: </label>
+                            <div class="sign__up-input-container">
+                                <input type="email" class="sign__up-input" id="sign__up-email" name="new-user-email">
+                            </div>
+                        </fieldset>
+
+
+                        <fieldset class="sign__up-field">
+                            <label class="sign__up-label" for="password">Password: </label>
+                            <div class="sign__up-input-container">
+                                <input type="password" minlength="8" maxlength="30" class="sign__up-input"
+                                    id="sign__up-password" name="new-user-password" required>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <p class="sign__up-text">Already a user? <button class="sign__up-link">Log In</button></p>
+                    <section class="sign__up-form-option">
+                        <button class="sign__up-submit-button" type="submit">Sign Up</button>
+                    </section>
+                </form>
+            </div>
+
+            <div class="log-in hidden">
+                <form class="log-in__form" action="https://formsubmit.co/info@liquidmoni.com" method="post">
+
+                    <input type="hidden" name="_subject" value="existing-user">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- use next page as a modal to confirm user has signed up or signed in -->
+
+                    <input type="hidden" name="_next" value="https://liquidmoni.com/index.html">
+
+                    <p class="log-in__note">You've logged in successfully</p>
+
+                    <section class="log-in__form-action">
+                        <fieldset class="log-in__field">
+                            <label class="log-in__label" for="email">Email Address: </label>
+                            <div class="log-in__input-container">
+                                <input type="email" class="log-in__input" id="log-in__email" name="old-user-email">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="log-in__field">
+                            <label class="log-in__label" for="password">Password: </label>
+                            <div class="log-in__input-container">
+                                <input type="password" class="log-in__input" id="log-in__password"
+                                    name="old-user-password" min="8" max="30" required>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <p class="log-in__text">New user? <button class="log-in__link">Sign Up</button></p>
+                    <section class="log-in__form-option">
+
+                        <button class="log-in__submit-button" type="submit">Login</button>
+                    </section>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__container">
+
+                <section class="footer__top">
+                    <h3 class="footer__top-text">Learn how to grow 💪your business with <span
+                            class="footer__hcighlight">Liquidmoni</span></h3>
+
+                    <a href="./pages/sign-up.html" class="footer__button">Download Soon</a>
+
+                    <div class="footer__social-icons">
+                        <a href="#" class="footer__link"><img src="../images/footer/twitter.png" alt="Twiiter"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="../images/footer/facebook.png" alt="Twitter"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="../images/footer/instagram.png" alt="Instagram"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="../images/footer/github.png" alt="GitHub"
+                                class="footer__image"></a>
+                    </div>
+                </section>
+
+                <hr class="footer__hr">
+
+                <section class="footer__bottom">
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Company</b></p>
+
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="./about.html"> About</a></li>
+                            <li class="footer__list-item"><a href="../index.html"> Features</a></li>
+                            <li class="footer__list-item"><a href="#"> Works</a></li>
+                            <li class="footer__list-item"><a href="#"> Career</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Help</b></p>
+
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#"> Customer Support</a></li>
+                            <li class="footer__list-item"><a href="#"> Terms and Conditions</a></li>
+                            <li class="footer__list-item"><a href="#"> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Resources</b></p>
+
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#"> Development Tutorial</a></li>
+                            <li class="footer__list-item"><a href="#"> How to- Blog</a></li>
+                        </ul>
+                        <!-- </div> -->
+                    </div>
+                </section>
+            </section>
+
+            <small class="footer__small-text">
+                &copy; 2023 Liquidmoni
+            </small>
+        </footer>
+    </div>
+</body>
+
+<!-- Firebase / Backend / Authentication -->
+<script type="./module" src="../Js/forms.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-auth.js"></script>
+<!-- The JavaScript for the Logic of the WebSite -->
+<script src="../Js/support.js"></script>
+<script src="../Js/script.js"></script>
+<script src="../Js/modal.js"></script>
+
+</html>

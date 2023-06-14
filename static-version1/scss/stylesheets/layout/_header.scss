@@ -1,0 +1,7 @@
+// Here will be the nav and the hero section
+@forward './hero';
+@use '../abstracts/mixins';
+
+.header {
+    padding-bottom: 0 !important;
+}

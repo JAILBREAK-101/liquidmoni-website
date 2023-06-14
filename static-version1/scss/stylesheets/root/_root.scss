@@ -1,0 +1,36 @@
+@use '../abstracts/colors';
+@use '../abstracts/type'as *;
+
+:root {
+
+    // The Homepage colors
+    @each $colorGroup,
+    $colorMap in colors.$colors {
+
+        @each $colorMaps,
+        $value in $colorMap {
+            --#{$colorGroup}-#{$colorMaps}: #{$value};
+        }
+    }
+
+    // // Fonts Sizes.
+    @each $font-maps,
+    $font-size in $type {
+
+        @each $font-size,
+        $font-value in $font-size {
+            --#{$font-maps}-#{$font-size}: #{$font-value};
+        }
+    }
+
+    // MEDIA QUERIES
+    // page colors.
+    @each $pageClrGroup,
+    $clrGroup in colors.$pageColors {
+
+        @each $maps,
+        $mapValue in $clrGroup {
+            --#{$pageClrGroup}-#{$maps}: #{$mapValue};
+        }
+    }
+}

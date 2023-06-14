@@ -1,0 +1,75 @@
+// STYLES CONCERNED WITH THE ABOUT PAGE.
+@use '../abstracts/mixins';
+@use '../abstracts/breakpoints'as *;
+@use '../components/navigation';
+
+.about__contents {
+    @include mixins.flexDisplay($flex-direction: column);
+}
+
+.about__container {
+    @include mixins.generalSpacing($gap: 2rem, $padding: 4rem);
+
+    &-header {
+        @include mixins.flexDisplay($flex-direction: column, $align-items: flex-start, $justify-content: stretch);
+        @include mixins.generalSpacing($gap: 2rem);
+
+        @include media("<phone"and "<=tablet") {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &-text {
+        color: var(--About-header-text-color);
+        font-size: var(--extra-large-200);
+        padding-inline-end: 12px;
+
+        @include media("<phone"and "<=tablet") {
+            font-size: var(--small-400);
+            max-width: 40ch;
+            text-align: center;
+        }
+    }
+
+    &-statement {
+        @include mixins.fonts($size: var(--small-300), $weight: 600);
+        color: var(--About-text-color);
+        line-height: 1;
+
+        @include media("<phone"and "<=tablet") {
+            font-size: var(--small-100);
+            max-width: 40ch;
+        }
+    }
+
+    // === For the grid position ===
+    &-footer img {
+        grid-column: 1/2;
+    }
+}
+
+// the second about container 
+.about__container:nth-of-type(2) {
+    @include mixins.generalSpacing($margin: 2rem 0 0 0, $padding: currentValue);
+    background-color: var(--About-bg-color);
+
+    .about__container-header {
+        align-items: flex-end;
+
+        @include media("<phone"and "<=tablet") {
+            align-items: center;
+        }
+    }
+
+    .about__container-statement {
+        text-align: right;
+
+    }
+}
+
+
+
+// &-text::after {
+//     // background: linear-gradient(rgba(0, 0, 0, 0) 0% #000000 46.35% rgba(0, 0, 0, 0) 100%);
+// }

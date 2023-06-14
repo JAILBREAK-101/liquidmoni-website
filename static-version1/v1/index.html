@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidmoni</title>
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Stylesheets (From The Header to the contents to the footer) -->
+    <link rel="stylesheet" href="./build/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Compulsory Style -->
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="original-wrapper main-wrapper">
+        <dialog class="support__modal">
+            <button class="support__close">
+                <img src="../images/svg-images/close.svg" alt="Support Close Button">
+            </button>
+        </dialog>
+
+        <header class="header">
+            <nav class="nav">
+                <a href="./index.html" class="nav__image-link">
+                    <img class="nav__logo" src="./images/header/Liquid-moni.png" alt="the logo">
+                </a>
+
+                <section class="mini-nav">
+                    <!-- <fieldset class="nav__toggle-box"> -->
+                    <label for="toggle" class="toggle__icon"><img src="./images/svg-images/menu.png"
+                            alt="toggle"></label>
+                    <input type="checkbox" id="toggle" class="toggle">
+                    <!-- </fieldset> -->
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./pages/sign-up.html" class="nav__link">Send Money</a></li>
+                        <li class="nav__item"><a href="./pages/about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="./pages/contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item"><a href="./pages/faq.html" class="nav__link">FAQ</a></li>
+                        <button class="support__open">Support</button>
+
+
+                        <!-- <div class="nav__button-group"> -->
+                        <a href="./pages/sign-up.html" class="nav__button">Download Soon</a>
+                        <!-- </div> -->
+                    </ul>
+                </section>
+            </nav>
+
+            <section class="hero">
+                <section class="hero__left-alignment">
+                    <!-- The Hero Message and Call to action -->
+                    <h1 class="hero__header-text">Virtual Transaction Mechanism</h1>
+                    <p class="hero__content-text">The Liquidmoni App makes it easy for you to receive and send money in
+                        your local currency from
+                        anywhere in the world.</p>
+
+                    <!-- this form doesn't need to be sent anywhere. -->
+                    <form action="./pages/thank-you.html" class="form" method="post">
+                        <!-- subject of email -->
+                        <input type="hidden" name="_subject" value="Notify User on App Release">
+
+                        <!-- the target url of this form - CHANGE THIS TO THE URL OF THE FORM-->
+                        <input type="hidden" name="_next" value="./pages/thank-you.html">
+
+                        <!-- remove the captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <!-- add reply-to for reminder -->
+                        <!-- <input type="_replyto" name=""> -->
+                        <input type="hidden" name="_autoresponse"
+                            value="Thank you for registering! You'll be notified on the Liquidmoni App release. We enjoy your company.">
+
+                        <!-- Use carbon copy to send the email to those who would attend to it in the team -->
+
+                        <!-- the form fieldsets and inputs -->
+                        <div class="form__fieldset">
+                            <label class="form__fieldset__label" for="email">Email</label>
+                            <input class="form__fieldset__email-input" type="email" id="email" name="user's-email"
+                                placeholder="Enter email address">
+                            <button type="submit" class="form__fieldset__button">Get
+                                Notified</button>
+                        </div>
+                    </form>
+
+                    <section class="hero__text-group">
+                        <div class="hero__text">
+                            <h2 class="hero__big-text">200</h2>
+                            <p class="hero__small-text">Recognized Countries</p>
+                        </div>
+
+                        <!-- The Svg Stripe Image -->
+                        <div class="hero__image-block">
+                            <img class="hero__image-stripe" src="./images/svg-images/Hero-group-text-stripes.svg"
+                                alt="Middle Stripe Image">
+                        </div>
+
+                        <div class="hero__text">
+                            <h2 class="hero__big-text">120+</h2>
+                            <p class="hero__small-text">Currencies around the Globe</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="hero__right-alignment">
+                    <section class="mobile__form-container">
+                        <form class="hero__phone form">
+                            <h1>Form</h1>
+                        </form>
+
+                        <!-- The IPhone XR -->
+                        <img class="hero__image" src="./images/header/iPhone XR.png" alt="The IPhone XR and it's form"
+                            width="500px">
+                        <!-- <img src="./scss/styles/IPhone-Stripe-bg.svg" alt=""> -->
+
+                        <!-- THE FORM INSIDE THE IMAGE - Desktop View -->
+                        <form class="hero__phone form ">
+                            <div class="hero__phone-up">
+
+                                <fieldset class="hero__phone-fieldset form__fieldset">
+                                    <legend class="hero__phone-label-container">
+                                        <label class="hero__phone-label form__label" for="send">You Send</label>
+                                    </legend>
+
+                                    <div class="hero__phone-input-block">
+                                        <input class="hero__phone-input form__input" type="number" name="send" id="send"
+                                            value="100.00">
+
+                                        <div class="hero__phone-country">
+                                            <!-- in here comes the image of the selected country for conversion -->
+                                            <div class="phone__hero-country-image-block">
+                                                <img class="hero__phone-country-image" src="" alt="Selected country">
+                                            </div>
+                                            <span class="hero__phone-country-name"></span>
+                                            <span class="hero__phone__dropdown-btn">
+                                                <img
+                                                    src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/null/external-arrow-arrows-those-icons-lineal-color-those-icons-1.png" />
+                                            </span>
+                                        </div>
+                                        <div class="hidden hero__phone-dropdown form__dropdown" aria-expanded=false
+                                            name="dropdown" id="dropdown">
+                                            <div class="hero__phone-options form__option" value="USA">
+                                                <div class="hero__phone-image-container">
+                                                    <img class="hero__phone-image" src="./images/hero/usa.svg"
+                                                        alt="country-logo">
+                                                </div>
+                                                <span class="hero__phone-text">
+                                                    USD
+                                                </span>
+                                            </div>
+                                            <div class="hero__phone-options form__option" value="NGA">
+                                                <div class="hero__phone-image-container">
+                                                    <img class="hero__phone-image" src="./images/hero/nigeria.svg"
+                                                        alt="country-logo">
+                                                </div>
+                                                <span class="hero__phone-text">
+                                                    NGA
+                                                </span>
+                                            </div>
+                                            <div class="hero__phone-options form__option" value="UK">
+
+                                                <div class="hero__phone-image-container">
+                                                    <img class="hero__phone-image" src="./images/hero/great-britain.svg"
+                                                        alt="country-logo">
+                                                </div>
+                                                <span class="hero__phone-text">
+                                                    UK
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="hero__phone-fieldset">
+                                    <legend class="hero__phone-label-container">
+                                        <label class="hero__phone-label" for="get">They Get</label>
+                                    </legend>
+                                    <div class="hero__phone-input-block">
+                                        <!-- <img src="./images/hero/nigeria.svg" alt="country-logo"> -->
+                                        <input class="hero__phone-input" type="number" id="get" name="get" required>
+                                        <!-- <span class="hero__phone-input" id="get"></span> -->
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="hero__phone-down">
+                                <button class="hero__button"><a class="hero__button-link" href="#">Get
+                                        Started</a></button>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- THERE IS A BACKGROUND IMAGE HERE. -->
+                </section>
+
+            </section>
+        </header>
+
+        <main class="main">
+            <!-- THE BENEFITS SECTION -->
+            <section class="benefits">
+                <p class="benefits__uptext">Say hello to <span class="benefits__highlight">Liquidmoni</span></p>
+                <h3 class="benefits__text">Send and Receive up to <span class="benefits__highlight">$5000</span> daily
+                    from anywhere: Whether you're a
+                    freelancer, small business owner
+                    or nonprofit organization.
+                </h3>
+
+                <hr class="main__horizontal-rule">
+
+                <section class="benefits__each">
+                    <p class="benefits__each-text"><img src="./images/benefits/Vector.png" alt="share your details"
+                            class="benefits__image"> Share your Liquidmoni details</p>
+                    <p class="benefits__each-text"><img src="./images/benefits/emptywallettick.png"
+                            alt="send in any currency" class="benefits__image"> Send money in any currency</p>
+                    <p class="benefits__each-text"><img src="./images/benefits/bank.png" alt="receive in any currency"
+                            class="benefits__image"> Receive money in any currency</p>
+                </section>
+
+                <div class="map-container">
+                    <img class="map-image" src="./images/benefits/THE MAP.png" alt="The Map Showing our location">
+                </div>
+            </section>
+
+            <!-- THE CONNECTING SECTION -->
+            <section class="features" id="features">
+                <div class="features__detail-block">
+                    <h2 class="features__header">Easily connect with clients or customers</h2>
+                    <p class="features__text">Our virtual transaction mechanism offers a range of benefits for
+                        businesses and individuals</p>
+                </div>
+
+                <section class="features__card">
+                    <div class="features__card-container">
+                        <h4 class="features__card__container-text">Support for multiple <span
+                                class="highlight">currencies and
+                                transfer</span> methods around
+                            the Globe</h4>
+                        <!-- <div class="feature__card__image-block"> -->
+                        <img src="./images/features/features-image1.png" alt="Image for card1"
+                            class="features__card__image">
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="features__card-container">
+                        <h4 class="features__card__container-text">Latest <span class="highlight">encryption and
+                                security</span>
+                            protocols for secure and
+                            reliable fund transfer process</h4>
+                        <img src="./images/features/features-image2.png" alt="Image for card2"
+                            class="features__card__image">
+                    </div>
+
+                    <div class="features__card-container">
+                        <h4 class="features__card__container-text"><span class="highlight">Low fees and
+                                competitive</span>
+                            exchange rates: affordable and
+                            accessible to everyone.</h4>
+                        <img src="./images/features/features-image3.png" alt="Image for card3"
+                            class="features__card__image">
+                    </div>
+                </section>
+            </section>
+
+            <!-- THE NOTIFICATION SECTION -->
+            <section class="notification">
+                <div class="notification__left">
+
+                    <section class="notification__header">
+
+                        <h2 class="notification__header-text">What are you waiting for, get notified when we go live
+                        </h2>
+                    </section>
+
+                    <section class="notification__body">
+
+                        <p class="notification__text">With our virtual transaction mechanism, you can receive payments
+                            in
+                            your local currency, eliminating the need for costly currency conversions and enabling you
+                            to
+                            manage your finances more efficiently.</p>
+
+                        <ul class="notification__features">
+                            <li class="notification__feature"><img src="./images/notify/Icon.png"
+                                    alt="Tick Image"><span>No
+                                    hidden fees or conversion
+                                    costs</span></li>
+                            <li class="notification__feature"><img src="./images/notify/Icon.png"
+                                    alt="Tick Image"><b>24/7
+                                    customer support</b></li>
+                            <li class="notification__feature"><img src="./images/notify/Icon.png"
+                                    alt="Tick Image"><span>Seamless
+                                    Intergration with
+                                    other apps</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="notification__footer">
+
+                        <form action="https://formsubmit.co/liquidmoniainfo@gmail.com" class="form">
+                            <!-- subject of email -->
+                            <input type="hidden" name="_subject" value="notify on release">
+                            <!-- the target url of this form -->
+                            <input type="hidden" name="_next" value="https://liquidmoni.com/pages/thank-you.html">
+                            <!-- remove the captcha -->
+                            <input type="hidden" name="_captcha" value="true">
+
+                            <!-- the form fieldsets and inputs -->
+                            <div data-field class="form__fieldset">
+                                <label class="form__fieldset__label" for="email">Email</label>
+                                <input data-email-input class="form__fieldset__email-input" type="email" id="email"
+                                    name="email" placeholder="Enter email address">
+                                <button data-email-button class="form__fieldset__button">Get
+                                    Notified</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- <div class="notification__right"> -->
+                <!-- Where the dark Iphone XR would be -->
+                <img class="notification__left-image" src="./images/notify/Iphone-Pic.png" alt="The Black IPhone XR">
+                <!-- </div> -->
+            </section>
+
+            <!-- The FAQ Section -->
+            <section class="Faq">
+                <h3 class="Faq__header">Frequently asked questions</h3>
+                <p class="Faq__text">Everything you need to know about the product and billing.</p>
+
+                <!-- THE ACCORDION -->
+                <section class="Faq__accordion-container">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="false">
+                                <span class="accordion-title">Is there a free trial?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Yes, you can try us for free for 30
+                                    days. If you want, we’ll provide you with a free, personalized 30-minute onboarding
+                                    call to get you up and running as soon as possible.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false">
+                                <span class="accordion-title">Can I change my plan?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Yes, you can try us for free for 30
+                                    days. If you want, we’ll provide you with a free, personalized 30-minute onboarding
+                                    call to get you up and running as soon as possible.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false">
+                                <span class="accordion-title">What is your cancellation policy?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Yes, you can try us for free for 30
+                                    days. If you want, we’ll provide you with a free, personalized 30-minute onboarding
+                                    call to get you up and running as soon as possible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__container">
+
+                <section class="footer__top">
+                    <h3 class="footer__top-text">Learn how to grow 💪your business with <span
+                            class="footer__highlight">Liquidmoni</span></h3>
+
+                    <a href="./pages/sign-up.html" class="footer__button">Download Soon</a>
+
+                    <div class="footer__social-icons">
+                        <a href="#" class="footer__link"><img src="./images/footer/twitter.png" alt="Twiiter"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="./images/footer/facebook.png" alt="Twitter"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="./images/footer/instagram.png" alt="Instagram"
+                                class="footer__image"></a>
+                        <a href="#" class="footer__link"><img src="./images/footer/github.png" alt="GitHub"
+                                class="footer__image"></a>
+                    </div>
+                </section>
+
+                <hr class="footer__hr">
+
+                <section class="footer__bottom">
+                    <!-- <div class="footer__other-links"> -->
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Company</b></p>
+
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="./pages/about.html"> About</a></li>
+                            <li class="footer__list-item"><a href="#features"> Features</a></li>
+                            <li class="footer__list-item"><a href="#"> Works</a></li>
+                            <li class="footer__list-item"><a href="#"> Career</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Help</b></p>
+
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#"> Customer Support</a></li>
+                            <!-- <li class="footer__list-item"><a href="#"> Delivery Details</a></li> -->
+                            <li class="footer__list-item"><a href="#"> Terms and Conditions</a></li>
+                            <li class="footer__list-item"><a href="#"> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__category">
+                        <p class="footer__category-title"><b>Resources</b></p>
+
+                        <ul class="footer__list">
+                            <!-- <li class="footer__list-item"><a href="#"> Free eBooks</a></li> -->
+                            <li class="footer__list-item"><a href="#"> Development Tutorial</a></li>
+                            <li class="footer__list-item"><a href="#"> How to- Blog</a></li>
+                            <!-- <li class="footer__list-item"><a href="#"> Youtube Playlist</a></li> -->
+                        </ul>
+                        <!-- </div> -->
+                    </div>
+                </section>
+            </section>
+
+            <small class="footer__small-text">
+                &copy; 2023 Liquidmoni
+            </small>
+        </footer>
+    </div>
+</body>
+
+<!-- auth and backend -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-auth.js"></script>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDepxmjXTw9JTHwo7gNMJ63tVJjgNsMI90",
+        authDomain: "liquidmoni-project.firebaseapp.com",
+        databaseURL: "https://liquidmoni-project-default-rtdb.firebaseio.com",
+        projectId: "liquidmoni-project",
+        storageBucket: "liquidmoni-project.appspot.com",
+        messagingSenderId: "626382019482",
+        appId: "1:626382019482:web:ddaf20cdb7f12b787cb823",
+        measurementId: "G-PLK7C36XE1",
+    };
+
+    const firebaseApp = initializeApp(firebaseConfig)
+    const realTimeDatabase = getDatabase()
+
+    let storeUserEmail = (userEmail) => {
+        realTimeDatabase.push(userEmail);
+
+        realTimeDatabase.set({
+            userEmailAddress: userEmail,
+        });
+    };
+
+    // FRONTEND - Email Validation and submission
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/g;
+    // const emailPattern = /g/
+    const emailForm = document.querySelector(".form");
+    const emailSubmitButton = document.querySelector(".form__fieldset__button");
+
+    emailSubmitButton.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const emailAddress = document.querySelector(
+            ".form__fieldset__email-input"
+        ).value;
+        if (emailForm.matches(emailPattern)) {
+            alert("GET NOTIFIED");
+            storeUserEmail(emailAddress);
+            // in here, perform all the functions for the user to receive the mail saying they'll be notified when the app is released
+        } else if (emailForm.value === "" || emailForm.value === " ") {
+            // Add a class for showing that the email is invalid
+            alert("INVALID");
+        }
+    });
+</script>
+
+<!-- The JavaScript for the Logic of the Website -->
+<!-- Frontend -->
+<script src="./Js/script.js"></script>
+<script src="./Js/faq.js"></script>
+<script src="./Js/modal.js"></script>
+
+<!-- backend - auth -->
+<!-- <script src="./Js/emailNotify.js"></script> -->
+
+</html>
