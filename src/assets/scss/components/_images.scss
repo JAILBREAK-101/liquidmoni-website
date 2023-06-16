@@ -1,0 +1,98 @@
+@use '../abstracts'as mixins;
+@use '../abstracts/breakpoints'as *;
+
+@mixin backgroundImgs($aspratio: 1) {
+    object-fit: cover;
+    max-width: 100%;
+    aspect-ratio: $aspratio;
+}
+
+// Logo
+.nav__logo {
+    @include mixins.widthAndHeight($width: 200px);
+    object-fit: scale-down;
+}
+
+// Hero Iphone
+.hero__image {
+    @include mixins.positioning($position: relative, $left: -8rem);
+    object-fit: cover;
+
+    @include media ("<=phone"and "<=900px") {
+        left: 0;
+        min-width: 100%;
+    }
+}
+
+.features__card__image {
+    object-fit: cover;
+    width: 800px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+
+    @include media ("<=phone"and "<=900px") {
+        object-fit: scale-down;
+        max-width: 100%;
+    }
+}
+
+// Notification Iphone
+.notification-image {
+    width: 2000px;
+
+    .notification__right-image {
+        position: relative;
+        left: 2rem;
+        object-fit: cover;
+        max-width: 100%
+    }
+
+    // @include media("<=phone"and "<=900") {
+    //     overflow: hidden;
+    //     @include backgroundImgs();   // }
+}
+
+// THE ABOUT PAGE BACKGROUND
+.about__hero-img {
+    @include backgroundImgs();
+    width: 100%;
+    object-fit: cover;
+}
+
+// The Contact Page Background.
+.contact__hero-image {
+    position: relative;
+
+    @include media("<=phone"and "<=900px") {
+        display: flex;
+    }
+
+    img {
+        position: relative;
+        @include backgroundImgs();
+
+        @include media("<phone"and "<=tablet") {
+            // scale image to normal size
+            // object-fit: scale-down;
+        }
+    }
+}
+
+.about-us {
+    &__hero__header {
+        @include mixins.backgroundImage('about-us', 'about-bg.png');
+    }
+}
+
+.about__container-image {
+    @include backgroundImgs();
+    align-self: center;
+    // height: auto;
+
+    @include media("<phone"and "<=tablet") {
+        max-width: 100%;
+        // width: 350px;
+        // margin: 0 auto;
+        object-fit: cover;
+    }
+}

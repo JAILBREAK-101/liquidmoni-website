@@ -1,0 +1,207 @@
+@use '../abstracts/mixins';
+@use '../abstracts/breakpoints'as *; // Create only file specific mixins, variables and function when needed
+
+// .nav__button-group {
+//     @include mixins.flexDisplay($flex-direction: row, $justify-content: space-between);
+//     @include mixins.generalSpacing($gap: 0.5rem);
+// margin-left: 4rem;
+
+.nav__button {
+    @include mixins.generalSpacing($padding: .7rem 1rem);
+    @include mixins.borderProps($borderRadVal: 5px);
+    font-weight: 600;
+    margin-left: 4rem;
+    display: block;
+
+    &--link {
+        background-color: var(--Header-nav-button-text-color);
+        color: var(--Header-nav-button-bg-color);
+    }
+
+    @include media("<=phone"and "<=tablet") {
+        margin-left: 2rem;
+    }
+}
+
+// WHEN THE APP IS RELEASED, USE THIS STYLES
+// .nav__button-link {
+//     background-color: var(--Header-nav-button-text-color);
+//     color: var(--Header-nav-button-bg-color);
+// }
+// }
+
+.hero__button {
+    @include mixins.generalSpacing($padding: .8rem 1rem);
+    @include mixins.borderProps($borderRadVal: 10px, $border: 0);
+    align-self: stretch;
+    width: 100%;
+    background-color: var(--Hero-button-bg-color);
+
+    &-link {
+        color: var(--Hero-button-text-color);
+        @include mixins.fonts($size: 1.2rem);
+    }
+}
+
+.footer__button {
+    @include mixins.generalSpacing($padding: .8rem 1rem);
+    @include mixins.borderProps($borderRadVal: 25px, $border: 0);
+    background-color: var(--Footer-white-color);
+    // color: var(--Footer-black-color);
+
+    &>* {
+        font-size: var(--small-100);
+        font-weight: 600;
+        color: var(--Footer-black-color);
+    }
+
+    // background: var(--Footer-white-color);
+}
+
+// pages styles
+.contact__button,
+.sign__up-submit-button,
+.log-in__submit-button {
+    @include mixins.colorSchemeMix($background-clr: var(--Contact-input-button-color), $color: var(--General-color-white));
+    @include mixins.generalSpacing($padding: 1.2rem);
+    @include mixins.fonts($size: var(--small-200), $weight: 600);
+    @include mixins.borderProps($borderRadVal: 10px, $border: 0);
+    align-self: stretch;
+}
+
+.support__open {
+    @include mixins.fonts($size: var(--small-200), $weight: 500);
+    background: none;
+}
+
+.support__close {
+    position: absolute;
+    z-index: 1;
+}
+
+// Button-padding: 12px, 18px, 12px, 18px
+/* faq section
+.Faq {
+    &__accordion-button {
+        padding: 1em;
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: var(--General-color-black);
+        font-size: 1.15rem;
+        font-weight: 400;
+        background-color: var(--General-color-white);
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: var(--General-color-black);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            cursor: pointer;
+            color: var(--General-color-black);
+            @include mixins.borderProps();
+        }
+    }
+
+    // the icon - when clicked and unclicked.
+    &__icon {
+        @include mixins.changeDisplay($display: inline-block);
+        position: absolute;
+        top: 18px;
+        right: 0;
+        height: 22px;
+        width: 22px;
+        border-radius: 22px;
+    }
+
+    &__icon::before {
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+    }
+
+    &__icon::after {
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+    }
+
+    &__icon::before,
+    &__icon::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background: currentColor;
+    }
+
+    // user clicks, something happens.
+    &__accordion-button[aria-expanded='true'] {
+        border-bottom: 1px solid #03b5d2;
+        color: var();
+    }
+
+    &__accordion-button[aria-expanded='true'] {
+        .Faq__icon::after {
+            width: 0;
+        }
+    }
+
+    &__accordion__button[aria-expanded='true']+.Faq__accordion-answer {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+    }
+
+    &__accordion-answer {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+
+        p {
+            @include mixins.fonts($size: 1rem, $weight: 300);
+            margin: 2rem;
+            color: var(--Faq-text-color);
+        }
+    }
+} */
+
+// .header__button-group {
+//         @include mixins.generalSpacing($gap: .5rem);
+
+//         // Each of the buttons
+//         .header__button {
+//             @include mixins.generalSpacing($padding: .7rem .9rem);
+//             @include mixins.borderProps($borderRadVal: 5px);
+//             @include mixins.fonts($weight: 600, $size: .8rem);
+//             // hard-code
+//             cursor: pointer;
+//         }
+//     }
+
+//     .header__button:nth-of-type(1) {
+//         @include mixins.colorSchemeMix($background-clr: $button-text-color);
+
+//         @include mixins.borderProps($border: 1px solid $header-color-black);
+
+//         .header__button-link {
+//             @include mixins.colorSchemeMix($color: $header-color-black)
+//         }
+//     }
+
+//     .header__button:nth-of-type(2) {
+//         @include mixins.colorSchemeMix($background-clr: $header-color-black, $color: $button-text-color);
+
+//         .header__button-link {
+//             @include mixins.colorSchemeMix($color: $button-text-color)
+//         }
+//     }

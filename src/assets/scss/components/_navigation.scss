@@ -1,0 +1,111 @@
+@use '../abstracts/mixins';
+@use '../abstracts/breakpoints'as *;
+
+.nav {
+    @include mixins.flexDisplay($align-items: center, $justify-content: space-between);
+    @include mixins.generalSpacing($margin: 0 0 2rem 0);
+    width: 100%;
+    padding: 2rem 4rem;
+
+    &__list {
+        @include mixins.flexDisplay($flex-direction: row);
+        @include mixins.generalSpacing($gap: 2rem);
+
+        @include media("<=phone"and "<=tablet") {
+            display: none;
+        }
+
+    }
+
+    .mini-nav {
+        @include mixins.generalSpacing($gap: 2rem);
+        @include mixins.flexDisplay($align-items: center, $justify-content:space-between);
+    }
+
+    // The Nav-Menu
+    @include media("<=phone"and "<=tablet") {
+        display: flex;
+    }
+
+    .toggle {
+        position: relative;
+        display: none;
+
+        @include media("<=phone"and "<=tablet") {
+            display: flex;
+            visibility: hidden;
+        }
+    }
+
+    .toggle__icon {
+        cursor: pointer;
+        display: none;
+
+        @include media("<=phone"and "<=tablet") {
+            display: block;
+        }
+    }
+
+    // AVOID OVER-NESTING (The Li and anchor tags - Navigation links)
+    .nav__item {
+        @include mixins.generalSpacing($margin: .2rem);
+        list-style: none;
+        // font-size: ;
+
+        .nav__link {
+            // For the Color
+            @include mixins.fonts($size: 1rem, $weight: 600);
+            color: var(--Header-color-black) !important;
+            transition: .2s ease-in-out !important;
+            background-color: none !important;
+            // for the support modal link
+            // &:hover {
+            //     color: var();
+            //     transform: scale(2);
+            // }
+        }
+    }
+
+    .toggle:checked~.nav__list {
+        @include media("<=phone"and "<=tablet") {
+            @include mixins.positioning($position: absolute, $top: 0, $bottom: 0);
+            @include mixins.colorSchemeMix($background-clr: var(--General-theme-color), $color: --General-color-white);
+            transition: all .2s;
+            display: flex;
+            padding: 4rem;
+            margin: 5rem;
+            height: 100%;
+            flex-direction: column;
+            z-index: 1;
+
+            .nav__link {
+                background: none;
+                font-size: var(--medium-300);
+                color: var(--General-color-white);
+            }
+
+            .nav__button {
+                @include mixins.colorSchemeMix($background-clr: var(--General-color-white), $color: var(--General-color-black));
+                font-size: var(--small-300);
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// .nav__toggle::before,
+// .nav__toggle::after {
+//     position: absolute;
+//     content: "";
+//     height: 200px;
+//     width: 200px;
+//     background-color: var(--Header-color-black);
+// }
+
+// .nav__toggle::before {
+//     left: 0;
+// }
+
+// .nav__toggle::after {
+//     right: 0;
+// }

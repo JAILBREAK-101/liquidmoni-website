@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+// each-container
+.home-wrapper,
+.faq-wrapper,
+.about-wrapper,
+.contact-wrapper,
+.sign-up-wrapper {
+    min-height: 100%;
+}

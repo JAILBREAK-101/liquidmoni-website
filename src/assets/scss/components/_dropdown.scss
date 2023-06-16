@@ -1,0 +1,39 @@
+// THE DROPDOWN ON THE HERO SECTION'S PHONE FORM
+@use '../abstracts/mixins';
+
+// WORK ON THE CURRENCY DROPDOWN STYLES
+
+// logic styles 
+.hero__phone-country {
+    @include mixins.flexDisplay();
+    @include mixins.colorSchemeMix($background-clr: var(--Hero-input-bg-color), $color: var(--General-color-black));
+    @include mixins.generalSpacing($gap: 0.2rem, $padding: 0.4rem);
+    border-radius: 10px;
+
+    // &-image-block {
+    // }
+
+    &-image {
+        @include mixins.borderProps($borderRadVal: 50%, $border: 0);
+        width: 30px;
+        object-fit: cover;
+    }
+
+    .hero__phone-dropdown {
+
+        .hero__phone-options {
+            @include mixins.flexDisplay();
+            gap: .4rem;
+
+            .hero__phone-text {
+                color: var(--General-color-black);
+            }
+
+            .hero__phone-image-container {
+                width: 30px;
+                border-radius: 100px;
+                object-fit: cover;
+            }
+        }
+    }
+}

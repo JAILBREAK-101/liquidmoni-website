@@ -1,0 +1,35 @@
+@use '../abstracts/mixins';
+
+// the modals
+.support__modal {
+    display: none;
+    position: fixed;
+    left: 30%;
+    z-index: 1;
+    border: 0;
+    border-radius: 15px;
+    transition: .2s display ease-in-out;
+
+    .support__header {
+        font-size: var(--large-100);
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .support__link {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @include mixins.colorSchemeMix($background-clr: var(--General-theme-color));
+    @include mixins.generalSpacing($margin: 2rem, $padding: 2rem);
+}
+
+.alert,
+.log-in__note,
+.sign__up-note {
+    @include mixins.colorSchemeMix($background-clr: green, $color: white);
+    display: none;
+    padding: 1rem;
+    width: 100%;
+}

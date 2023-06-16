@@ -27,6 +27,3 @@ dist-ssr
 routes
 reserved
 .env
-
-# Until Ready for deployment hide
-src

@@ -1,0 +1,74 @@
+@use '../abstracts/mixins';
+@use '../abstracts/breakpoints'as *;
+
+// THE FOOTER SECTION STYLES
+.footer {
+    @include mixins.generalSpacing($padding: 3rem);
+    background: var(--Footer-background-color);
+    color: var(--Footer-white-color);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: var(--large-100);
+        max-width: 30ch;
+    }
+
+    &__highlight {
+        color: var(--Footer-main-color);
+    }
+
+    &__hr {
+        color: var(--Footer-white-color);
+        margin: 4rem 0;
+    }
+
+    &__small-text {
+        @include mixins.generalSpacing($margin: 2rem 0 0 0);
+        display: block;
+        text-align: center;
+    }
+}
+
+// THE BOTTOM LEFT AND RIGHT
+.footer__bottom {
+    @include mixins.flexDisplay($justify-content: space-around);
+    @include mixins.generalSpacing($gap: 5rem);
+
+    @include media("<=phone"and "<=tablet") {
+        flex-direction: column;
+    }
+
+    // The category section.
+    .footer__category {
+        @include mixins.generalSpacing($gap: 1rem);
+        @include mixins.flexDisplay($flex-direction: column, $justify-content: start);
+
+        .footer__list {
+            @include mixins.flexDisplay($flex-direction: column);
+
+            @include media ("<=phone"and "<=600px") {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .footer__list-item {
+                margin-bottom: 1rem;
+                flex-grow: 1;
+
+
+                .footer__link {
+                    color: var(--Footer-white-color);
+                }
+            }
+        }
+    }
+
+    @include media ("<=phone"and "<=600px") {
+        flex-direction: column;
+    }
+}

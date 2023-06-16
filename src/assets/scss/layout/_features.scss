@@ -1,0 +1,85 @@
+// THE FEATURE SECTION
+@use '../abstracts/'as mixins;
+@use '../abstracts/breakpoints'as *;
+@use '../components/images'as backgroundImg;
+
+$border-radius: 30px;
+
+@mixin getDimension($width: none, $height: none) {
+    aspect-ratio: calc($width / $height);
+}
+
+.features {
+    &__detail-block {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+.features__header {
+    @include mixins.fonts($size: var(--extra-large-200), $weight: 600);
+    margin: 0.7rem;
+    text-align: center;
+
+    @include media ("<=phone"and "<=tablet") {
+        font-size: var(--small-500);
+    }
+
+    +.features__text {
+        @include mixins.fonts($size: var(--small-400), $weight: 400);
+        max-width: inherit;
+        text-align: center;
+
+        @include media ("<=phone"and "<=tablet") {
+            font-size: var(--small-200);
+        }
+    }
+}
+
+.features__card {
+    @include mixins.flexDisplay($justify-content: space-between, $align-items: center);
+    gap: 2rem;
+    margin: 2rem;
+
+    @include media ("<=phone"and "<=900px") {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-container {
+        @include mixins.flexDisplay($flex-direction: column, $align-items: none);
+        @include mixins.generalSpacing($padding: 1.5rem);
+        background-color: var(--Features-card-background);
+        border-radius: $border-radius;
+
+        @include media ("<=phone"and "<=900px") {
+            max-width: 45ch;
+        }
+
+        &-text {
+            font-size: var(--small-400);
+            max-width: 40ch;
+
+            @include media ("<=phone"and "<=900px") {
+                text-align: left;
+                font-size: var(--small-100);
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .highlight {
+        background-color: var(--General-theme-color);
+    }
+}
+
+// FOR THE SAKE OF RESPONSIVENESS
+// .features__card:nth-child(1) {
+//     flex-shrink: 1;
+// }
+// .features__card:nth-child(2) {
+//     flex-shrink: 1;
+// }
+// .features__card:nth-child(3) {
+//     flex-shrink: 1;
+// }

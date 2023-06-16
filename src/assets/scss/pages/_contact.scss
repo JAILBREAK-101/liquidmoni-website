@@ -1,0 +1,24 @@
+// STYLES CONCERNED WITH THE HOME PAGE.
+@use '../abstracts/mixins';
+@use '../abstracts/breakpoints'as *;
+
+.contact {
+    &__header {
+        background-image: url('/public/images/contact-us/contact-us-bg-text.png');
+    }
+
+    &__head-text {
+        color: var(--Contact-header-text-color);
+        font-size: var(--extra-large-200);
+
+        @include media("<=phone"and "<=tablet") {
+            font-size: var(--medium-200);
+            text-align: center;
+        }
+    }
+}
+
+.alert {
+    @include mixins.colorSchemeMix($background-clr: green, $color: white);
+    display: none;
+}
